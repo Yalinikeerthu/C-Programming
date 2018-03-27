@@ -1,21 +1,27 @@
-#include <stdio.h>
+#include <iostream>
+using namespace std;
 
-int main(void) {
-		int a;
-	
-	scanf("%d",&a);
-	if(a<0){
-		printf("%d is negative",a);
-		
-	}
-		else if(a==0)
+int main() {
+	int a;
+	cin>>a;
+	if((1<=a)||(a<=100000)){
+		cout<<a <<"is positive";
+		}
+		else if(a<0)
 		{
-				printf("%d is zero",a);
+				cout<<a <<"is negative";
 		}
 		else
 		{
-				printf("%d is positive",a);
+				cout<<a<<" is zero";
+			}
+	if(a>100000){
+			try{
+					throw a;
+				}
+		catch(int a){
+			cout<<"exception";
 		}
-
+}
 	return 0;
 }
